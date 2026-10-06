@@ -14,8 +14,15 @@ def build_vocab(text):
     # TODO: return a sorted list of every unique character in text
     return sorted(list(set(text)))
 
-# Step 2 - build_stoi (not yet solved)
-# TODO: implement
+# Step 2 - build_stoi
+import numpy as np
+def build_stoi(vocab):
+    """Return a dict mapping each character in vocab to its index."""
+    # TODO: map each character in vocab to its integer position
+
+    vocab_position = {lettre: index for index,lettre in enumerate(vocab)}
+    #on defini l'index au tant que lettre et on fait un boucle pour trouve leur place avec index et lettre dans enum 
+    return vocab_position
 
 # Step 3 - build_itos (not yet solved)
 # TODO: implement
