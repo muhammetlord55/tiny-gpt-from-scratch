@@ -56,8 +56,17 @@ def decode_int(token_id, itos):
     
     return itos[token_id]
 
-# Step 7 - decode_ids (not yet solved)
-# TODO: implement
+# Step 7 - decode_ids
+def decode_ids(ids, itos):
+    """Decode a list of token ids into a string using itos."""
+    # TODO: map each id through decode_int and join the characters into one string.
+    result = ''
+    if ids == []:
+        return result
+    for i in ids:
+        decode = decode_int(i,itos)
+        result += decode
+    return result
 
 # Step 8 - make_1d_array (not yet solved)
 # TODO: implement
